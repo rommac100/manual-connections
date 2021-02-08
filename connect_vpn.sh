@@ -6,6 +6,8 @@ if [ $1 = "-k" ]; then
         kill `cat kill_id`
         exit
 else
+	#export PIA_USER=xxxx
+	#export PIA_PASS=xxxx
         export PIA_PF=true
         export PIA_AUTOCONNECT=openvpn_udp_standard
         export MAX_LATENCY=.07
