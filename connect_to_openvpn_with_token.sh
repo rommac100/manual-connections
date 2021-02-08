@@ -232,6 +232,11 @@ To disconnect the VPN, run:
 
 --> ${GREEN}sudo kill $ovpn_pid${NC} <--
 "
+rm kill_id
+echo $ovpn_pid >> kill_id
+
+rm server_ip
+echo $OVPN_SERVER_IP >> server_ip
 
 # This section will stop the script if PIA_PF is not set to "true".
 if [ "$PIA_PF" != true ]; then

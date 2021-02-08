@@ -125,6 +125,8 @@ Payload   ${GREEN}$payload${NC}
 --> The port is ${GREEN}$port${NC} and it will expire on ${RED}$expires_at${NC}. <--
 
 Trying to bind the port... "
+rm port_pia
+echo $port >> port_pia
 
 # Now we have all required data to create a request to bind the port.
 # We will repeat this request every 15 minutes, in order to keep the port
